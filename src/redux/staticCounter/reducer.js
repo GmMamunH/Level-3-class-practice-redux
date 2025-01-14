@@ -9,12 +9,12 @@ export const reducer = (state = initialState, action) => {
     case INCREMENT:
       return {
         ...state,
-        value: state.value + 2,
+        value: state.value + action.payload.value,
       };
     case DECREMENT:
       return {
         ...state,
-        value: state.value - 1,
+        value: state.value - action.payload.value,
       };
 
     case RESET:
