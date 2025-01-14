@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { decrement, increment } from "../redux/staticCounter/action";
+import { decrement, increment, reset } from "../redux/staticCounter/action";
 
 export const Counter = () => {
   const { value } = useSelector((state) => state);
@@ -9,6 +9,7 @@ export const Counter = () => {
   const dispatch = useDispatch();
   const Increment = () => dispatch(increment());
   const Decrement = () => dispatch(decrement());
+  const Reset = () => dispatch(reset());
   return (
     <div className="bg-slate-500 p-3 w-96 mx-auto text-center rounded-md">
       <p className="text-3xl text-white">{value}</p>
@@ -18,6 +19,12 @@ export const Counter = () => {
           className="bg-green-600 px-3 py-1 rounded-md text-white"
         >
           Increments
+        </button>
+        <button
+          onClick={Reset}
+          className="bg-teal-700 px-3 py-1 rounded-md text-white"
+        >
+          Reset
         </button>
         <button
           onClick={Decrement}
