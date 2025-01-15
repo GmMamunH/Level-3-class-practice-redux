@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { decrement, increment, reset } from "../redux/staticCounter/action";
 
 export const Counter = () => {
-  const { value } = useSelector((state) => state);
+  const { value } = useSelector((state) => state.staticCounter);
   console.log(value);
 
   const dispatch = useDispatch();

@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { decrement, increment, reset } from "../redux/staticCounter/action";
+import { decrement, increment, reset } from "../redux/dynamicCounter/action";
 
 export const DynamicCounter = () => {
-  const { value } = useSelector((state) => state);
+  const { value } = useSelector((state) => state.dynamicCounter);
   console.log(value);
 
   const dispatch = useDispatch();
