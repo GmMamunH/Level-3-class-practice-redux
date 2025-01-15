@@ -1,4 +1,8 @@
-import { DECREMENT, INCREMENT, RESET } from "./actionTypes";
+import {
+  DYNAMIC_DECREMENT,
+  DYNAMIC_INCREMENT,
+  DYNAMIC_RESET,
+} from "./actionTypes";
 
 const initialState = {
   value: 0,
@@ -6,21 +10,21 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case INCREMENT:
+    case DYNAMIC_INCREMENT:
       return {
         ...state,
         value: state.value + action.payload.value,
       };
-    case DECREMENT:
+    case DYNAMIC_DECREMENT:
       return {
         ...state,
         value: state.value - action.payload.value,
       };
 
-    case RESET:
+    case DYNAMIC_RESET:
       return { ...state, value: (state.value = 0) };
     default:
       return state;
   }
 };
-export default reducer;
+export default reducer
