@@ -1,12 +1,9 @@
-import {
-  DYNAMIC_DECREMENT,
-  DYNAMIC_INCREMENT,
-  DYNAMIC_RESET,
-} from "./actionTypes";
+/* eslint-disable no-unused-vars */
+import { DECREMENT, INCREMENT, RESET } from "./actionTypes";
 
 export const increment = (value) => {
   return {
-    type: DYNAMIC_INCREMENT,
+    type: INCREMENT,
     payload: {
       value: 5,
     },
@@ -15,7 +12,7 @@ export const increment = (value) => {
 
 export const decrement = (value) => {
   return {
-    type: DYNAMIC_DECREMENT,
+    type: DECREMENT,
     payload: {
       value: 2,
     },
@@ -24,6 +21,6 @@ export const decrement = (value) => {
 
 export const reset = () => {
   return {
-    type: DYNAMIC_RESET,
+    type: RESET,
   };
 };
